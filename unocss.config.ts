@@ -40,10 +40,12 @@ export default defineConfig({
     // https://github.com/unocss/unocss/tree/main/packages/transformer-directives
     transformerDirectives(),
 
+    transformerRenameClass(),
+
+
     // https://github.com/unocss/unocss/tree/main/packages/transformer-variant-group
     transformerVariantGroup(),
 
-    transformerRenameClass(),
   ],
   // https://github.com/unocss/unocss#safelist
   safelist: 'prose prose-sm m-auto text-left'.split(' '),

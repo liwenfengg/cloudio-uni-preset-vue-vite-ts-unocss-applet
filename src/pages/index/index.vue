@@ -6,14 +6,60 @@
     </view>
   </view>
 
+  <view w8 h8 class="hover:(bg-gray-400 font-medium) font-(light mono)">test</view>
   <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
   <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
-  <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
+
+       <uni-easyinput
+            v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
+            placeholder="请输入手机号码"
+          />
+
+  <view mx4 mt4 p4 bg-white rounded>
+    <!-- TODO: 先做个假的 -->
+    <view flex items-center mb6>
+      <view flex-1>
+        自动签到
+      </view>
+      <switch scale-75 />
+    </view>
+
+    <!-- TODO: https://uniapp.dcloud.net.cn/api/system/getappauthorizesetting.html#getappauthorizesetting -->
+    <view flex items-center>
+      <view flex-1>
+        消息通知
+      </view>
+      <switch scale-75 />
+    </view>
+  </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 const title = ref('Hello')
+
+const form =reactive({
+  phone: '',
+})
+
+async function logout() {
+  uni.showLoading({ title: '退出登录中...' })
+
+  // await apiWitUserLogout()
+
+  uni.hideLoading()
+
+  uni.showToast({
+    title: '已退出',
+    icon: 'success',
+    duration: 800,
+    success() {
+      setTimeout(() => {
+        uni.navigateTo({ url: '/pages/login/login' })
+      }, 800)
+    },
+  })
+}
 </script>
 
 <style>
