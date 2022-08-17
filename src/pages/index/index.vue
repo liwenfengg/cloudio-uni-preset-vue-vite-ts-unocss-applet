@@ -8,7 +8,10 @@
 
   <view w8 h8 class="hover:(bg-gray-400 font-medium) font-(light mono)">test</view>
   <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
-  <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
+  <view w8 h8 class="bg-red">test</view>
+  <view w8 h8 bg-green >test</view>
+  <view w8 h8 class="bg-#F2FF2F">test</view>
+  <view w8 h8 class="bg-[#F2FF2F]">test</view>
 
        <uni-easyinput
             v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"

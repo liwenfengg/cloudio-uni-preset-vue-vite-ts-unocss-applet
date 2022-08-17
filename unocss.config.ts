@@ -40,7 +40,7 @@ export default defineConfig({
     // https://github.com/unocss/unocss/tree/main/packages/transformer-directives
     transformerDirectives(),
 
-    transformerRenameClass(),
+    // transformerRenameClass(),
 
 
     // https://github.com/unocss/unocss/tree/main/packages/transformer-variant-group
