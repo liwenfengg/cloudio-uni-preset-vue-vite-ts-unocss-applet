@@ -8,15 +8,16 @@
 
   <view w8 h8 class="hover:(bg-gray-400 font-medium) font-(light mono)">test</view>
   <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
+  <view w8 h8 class="bg-[url('https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg')]">
+    test</view>
   <view w8 h8 class="bg-red">test</view>
-  <view w8 h8 bg-green >test</view>
+  <view w8 h8 bg-green>test</view>
   <view w8 h8 class="bg-#F2FF2F">test</view>
   <view w8 h8 class="bg-[#F2FF2F]">test</view>
+  <view w8 h8 text="base #F2FF" font="serif">test</view>
 
-       <uni-easyinput
-            v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
-            placeholder="请输入手机号码"
-          />
+  <uni-easyinput v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
+    placeholder="请输入手机号码" />
 
   <view mx4 mt4 p4 bg-white rounded>
     <!-- TODO: 先做个假的 -->
@@ -41,7 +42,7 @@
 import { reactive, ref } from 'vue'
 const title = ref('Hello')
 
-const form =reactive({
+const form = reactive({
   phone: '',
 })
 
