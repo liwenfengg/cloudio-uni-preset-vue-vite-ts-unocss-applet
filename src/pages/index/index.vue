@@ -2,8 +2,10 @@
 
 
   <view w8 h8 class="hover:(bg-gray-400 font-medium) font-(light mono)">test</view>
-  <view w18 h18 class="bg-['url(/static/logo.png')]">test</view>
+  <view w18 h18 class="bg-[url(static/logo.png)]">test</view>
   <view w18 h18 class="bg-[url(/static/logo.png)]">test</view>
+  <view w18 h18 style="background-image: url('/static/logo.png');">test</view>
+
   <view w28 h28 bg-center class="bg-[url(https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg)]">
     test</view>
   <view w8 h8 class="bg-red">test</view>
@@ -11,6 +13,7 @@
   <view w8 h8 class="bg-#F2FF2F">test</view>
   <view w8 h8 class="bg-[#F2FF2F]">test</view>
   <view w8 h8 text="base #F2FF" font="serif">test</view>
+  <view text-b-f>test</view>
 
   <uni-easyinput v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
     placeholder="请输入手机号码" />
