@@ -1,14 +1,10 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
-  </view>
+
 
   <view w8 h8 class="hover:(bg-gray-400 font-medium) font-(light mono)">test</view>
-  <view w8 h8 class="bg-[url('/static/logo.png')]">test</view>
-  <view w8 h8 class="bg-[url('https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg')]">
+  <view w18 h18 class="bg-['url(/static/logo.png')]">test</view>
+  <view w18 h18 class="bg-[url(/static/logo.png)]">test</view>
+  <view w28 h28 bg-center class="bg-[url(https://raw.githubusercontent.com/unocss/unocss/main/playground/public/icon-gray.svg)]">
     test</view>
   <view w8 h8 class="bg-red">test</view>
   <view w8 h8 bg-green>test</view>
