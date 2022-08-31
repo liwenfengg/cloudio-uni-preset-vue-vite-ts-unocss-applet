@@ -27,7 +27,21 @@
 
   <view w-full h18 text="base #F2FF" font="serif">text="base #F2FF" font="serif"</view>
 
-  <view w-full text-b-f text-base text-black>text-b-f text-base text-black</view>
+  <view w-full text-b-f>text-b-f </view>
+
+  <view class="w-8 h-8 bg-red">hello</view>
+  <view class="w-8.5 h-8.5 bg-green">hello</view>
+  <view class="w-8 h-8 bg-red">hello</view>
+
+  // from
+  <div>{{ 'bg-[hsl(2.7,81.9%,69.6%)]' }}</div>
+
+  // to
+  <div>{{ 'uno-98db2v' }}</div>
+
+
+  <div>{{ 'bg-[123]' }}</div>
+  <div>{{ 'gg-gg' }}</div>
 
   <uni-easyinput v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
     placeholder="请输入手机号码" />
