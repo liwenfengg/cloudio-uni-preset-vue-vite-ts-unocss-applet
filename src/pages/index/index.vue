@@ -1,8 +1,20 @@
+<script setup lang="ts">
+import { reactive, ref } from 'vue'
+
+const form = reactive({
+  phone: '',
+})
+
+
+</script>
+
 <template>
   <view w-full h18 class="hover:(bg-gray-400 font-black) font-(light mono)">hover:(bg-gray-400 font-black)</view>
 
+  <!-- #ifdef APP-PLUS -->
   <view w-full h18 bg-right bg-no-repeat bg-contain class="bg-[url(static/logo.png)]">class="bg-[url(static/logo.png)]"
   </view>
+  <!-- #endif -->
 
   <view w-full h18 bg-right bg-no-repeat bg-contain class="bg-[url(/static/logo.png)]">
     class="bg-[url(/static/logo.png)]"</view>
@@ -65,15 +77,7 @@
   </view>
 </template>
 
-<script setup lang="ts">
-import { reactive, ref } from 'vue'
 
-const form = reactive({
-  phone: '',
-})
-
-
-</script>
 
 <style>
 </style>
