@@ -3,6 +3,7 @@ import { reactive, ref } from 'vue'
 
 const form = reactive({
   phone: '',
+  pwd:''
 })
 
 
@@ -55,8 +56,34 @@ const form = reactive({
   <div>{{ 'bg-[123]' }}</div>
   <div>{{ 'gg-gg' }}</div>
 
-  <uni-easyinput v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
-    placeholder="请输入手机号码" />
+  <view w-full mt16 px4 box-border rounded-lg class="bg-[#fff]">
+      <uni-forms ref="refForm" border err-show-type="toast"  :model-value="form">
+        <uni-forms-item name="phone">
+          <template #label>
+            <!-- don't delete,for fix uni-ui bug -->
+            <!-- https://uniapp.dcloud.net.cn/component/uniui/uni-forms.html#formsitem-props -->
+            <!-- https://github.com/dcloudio/uni-ui/issues/570 -->
+            <view hidden />
+          </template>
+          <uni-easyinput
+            v-model="form.phone" :input-border="false" :trim="true" type="number" prefix-icon="person"
+            placeholder="请输入手机号码"
+          />
+        </uni-forms-item>
+
+        <uni-forms-item name="pwd">
+          <template #label>
+            <view hidden />
+          </template>
+          <uni-easyinput
+            v-model="form.pwd" :input-border="false" :trim="true" type="password"
+            prefix-icon="locked-filled" placeholder="请输入登录密码"
+          />
+        </uni-forms-item>
+
+       
+      </uni-forms>
+    </view>
 
   <view mx4 mt4 p4 bg-white rounded>
     <!-- TODO: 先做个假的 -->

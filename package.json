@@ -54,10 +54,10 @@
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040820220424001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040820220424001",
     "@types/node": "^18.7.14",
-    "sass": "^1.54.7",
+    "sass": "^1.54.8",
     "typescript": "^4.8.2",
-    "unocss": "^0.45.13",
-    "unocss-applet": "^0.2.5",
+    "unocss": "^0.45.15",
+    "unocss-applet": "^0.2.8",
     "vite": "^2.9.15"
   }
 }
